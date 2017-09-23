@@ -8,7 +8,7 @@ List to do with this editable static website. The number aren't priorities. The 
 1.1 A simple mathjax option like in Jupyter would be suffice.
 
 2. Create a minimalist CSS like Scientific American but static.   
-2.1 Find a way to gain access website fonts, kerning, line space, and many other things about typography setting.   
+2.1 Find a way to gain access website fonts, size, kerning, line space, and many other things about typography setting.   
 2.2 Find a way to differentiate sections. Sections are header, body, and footer.   
 2.3 Paint every media (images, videos, and interactive media) and find the fittest way to present them.   
 2.4 Search a basic bootstrap for a CSS and exploit it.   
@@ -24,3 +24,6 @@ List to do with this editable static website. The number aren't priorities. The 
 5.1 Find out programming languange that any browser could render as an interactive media.     
 
 *Is it use any markdown move?*
+
+Notes:
+I already use markdown and simple post management. Thanks to http://jmcglone.com/guides/github-pages/ 
