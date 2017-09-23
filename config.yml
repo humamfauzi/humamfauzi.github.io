@@ -1,2 +1,3 @@
 name: Humam Fauzi, Nah Nah corp
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
