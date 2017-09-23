@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Humam Fauzi Math First Post"
-date: 2014-04-30
+date: 2015-04-30
 ---
 
 Let's test some inline math $x$, $y$, $x_1$, $y_1$.
