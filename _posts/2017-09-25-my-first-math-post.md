@@ -4,52 +4,9 @@ title: "Humam Fauzi Math First Post"
 date: 2015-04-30
 ---
 
-Let's test some inline math \\( x \\) $ y $, \\(x_1\\), \\(y_1\\).
+$$k_{\,1,i} = f(t_{1,n}+c_ih, t_{2,n}+c_ih, \cdots , t_{n,n}+c_ih \quad ; \quad y_{1,n} +h\sum_{j=1}^{i-1}a_{i-1,\,j}k_{\, 1,i-1},\; y_{2,n} +h\sum_{j=1}^{i-1}a_{i-1,\,j}k_{\, 2,i-1}, \cdots ,y_{n,n} +h\sum_{j=1}^{i-1}a_{i-1,\,j}k_{\, n,i-1})$$
+$$k_{\,2,i} = f(t_{1,n}+c_ih, t_{2,n}+c_ih, \cdots , t_{n,n}+c_ih \quad ; \quad y_{1,n} +h\sum_{j=1}^{i-1}a_{i-1,\,j}k_{\, 1,i-1},\; y_{2,n} +h\sum_{j=1}^{i-1}a_{i-1,\,j}k_{\, 2,i-1}, \cdots ,y_{n,n} +h\sum_{j=1}^{i-1}a_{i-1,\,j}k_{\, n,i-1})$$
+$$k_{\,3,i} = f(t_{1,n}+c_ih, t_{2,n}+c_ih, \cdots , t_{n,n}+c_ih \quad ; \quad y_{1,n} +h\sum_{j=1}^{i-1}a_{i-1,\,j}k_{\, 1,i-1},\; y_{2,n} +h\sum_{j=1}^{i-1}a_{i-1,\,j}k_{\, 2,i-1}, \cdots ,y_{n,n} +h\sum_{j=1}^{i-1}a_{i-1,\,j}k_{\, n,i-1})$$
+$$\vdots$$
+$$k_{\,n,i} = f(t_{1,n}+c_ih, t_{2,n}+c_ih, \cdots , t_{n,n}+c_ih \quad ; \quad y_{1,n} +h\sum_{j=1}^{i-1}a_{i-1,\,j}k_{\, 1,i-1},\; y_{2,n} +h\sum_{j=1}^{i-1}a_{i-1,\,j}k_{\, 2,i-1}, \cdots ,y_{n,n} +h\sum_{j=1}^{i-1}a_{i-1,\,j}k_{\, n,i-1})$$
 
-Now a inline math with special character: \\( |\psi\rangle \\), \\(x\\), \\(x^\*\\).
-
-Test a display math:
-$$
-  |\psi_1\rangle = a|0\rangle + b|1\rangle
-$$
-Is it O.K.?
-
-Test a display math with equation number:
-\begin{equation}
-   |\psi_1\rangle = a|0\rangle + b|1\rangle
-\end{equation}
-Is it O.K.?
-
-Test a display math with equation number:
-$$
-  \begin{align}
-    |\psi_1\rangle &= a|0\rangle + b|1\rangle \\\\
-    |\psi_2\rangle &= c|0\rangle + d|1\rangle
-  \end{align}
-$$
-Is it O.K.?
-
-And test a display math without equaltion number:
-$$
-  \begin{align\*}
-    |\psi_1\rangle &= a|0\rangle + b|1\rangle \\\\
-    |\psi_2\rangle &= c|0\rangle + d|1\rangle
-  \end{align\*}
-$$
-Is it O.K.?
-
-Test a display math with equation number:
-\begin{align}
-    |\psi_1\rangle &= a|0\rangle + b|1\rangle \\\\
-    |\psi_2\rangle &= c|0\rangle + d|1\rangle
-\end{align}
-Is it O.K.?
-
-And test a display math without equaltion number:
-\begin{align\*}
-    |\psi_1\rangle &= a|0\rangle + b|1\rangle \\\\
-    |\psi_2\rangle &= c|0\rangle + d|1\rangle
-\end{align\*}
-Is it O.K.?
-
-All this equation and mathjax markdown guidance is provided by Haixing-Hu
