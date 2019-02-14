@@ -1,3 +1,10 @@
+---
+layout: page
+title: About
+permalink: /about/
+---
+
+
 Hi, my name is Humam Fauzi. I am a backend software engineer with experience handling
 Amazon Web Services (AWS) and multiple backend service such as designing, creating, and deploying
 Application Programming Interface (API) and supporting service such as Publisher/Subscriber. 
