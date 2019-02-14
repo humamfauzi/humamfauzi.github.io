@@ -1,44 +1,20 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-			<script type="text/x-mathjax-config">
-			  MathJax.Hub.Config({
-			    TeX: {
-			      equationNumbers: {
-				autoNumber: "AMS"
-			      }
-			    },
-			    tex2jax: {
-			      inlineMath: [ ['$','$'], ['\(', '\)'] ],
-			      displayMath: [ ['$$','$$'] ],
-			      processEscapes: true,
-			    }
-			  });
-			</script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-		</head>
-		<body>
-			<nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-		        	<li><a href="/about">About</a></li>
-	        		<li><a href="/cv">CV</a></li>
-	        		<li><a href="/blog">Blog</a></li>
-	    		</ul>
-			</nav>
-			<div class="container">
-			
-			{{ content }}
-			
-			</div><!-- /.container -->
-			<footer>
-	    		<ul>
-	        		<li><a href="mailto:humam.fauzi.93@gmail.com">email</a></li>
-	        		<li><a href="https://github.com/humamfauzi">github.com/humamfauzi</a></li>
-				</ul>
-			</footer>
-		</body>
-	</html>
+<html>
+  {% include head.html %}
+  <body>
+    <div class="page-content">
+      <div class="container">
+        <div class="three columns">
+          {% include header.html %}
+        </div>
+
+        <div class="nine columns" style="z-index:100;">
+          <div class="wrapper">
+            {{ content }}
+          </div>
+        </div>
+      </div>
+      {% include footer.html %} 
+    </div>
+  </body>
+</html>
