@@ -14,7 +14,7 @@ title: Archive
 		  <tr>
 			  <td><span>{{ post.date | date_to_string }}</span></td>
 			  <td><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></td>
-			  <td><a href="{{ post.category }} | prepend: {{ site.baseurl }}/category/#">
+			  <td><a href="{{ "/category/#" | append: post.category | prepend: site.baseurl }}">
 					  <data data-icon="ei-paperclip"></data><small>{{ post.category }}</small></a>
 			  </td>
 		  </tr>

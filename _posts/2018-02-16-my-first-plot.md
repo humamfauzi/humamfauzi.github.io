@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Plotting 
-category: Computational Science
+category: CompSci
 tags: [Visualization, test]
 description: Attempt to create a plot inside a markdown
 ---
