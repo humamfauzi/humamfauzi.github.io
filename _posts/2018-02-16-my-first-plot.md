@@ -444,7 +444,6 @@ Modified Bar Chart
 	  showlegend: false, 
 	  type: "scatter"
 	};
-
 	var trace4 = {
 	  x: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 
 	  y: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 
@@ -501,14 +500,22 @@ Modified Bar Chart
 
 <div id="tester014" style="height:600px;width:600px"></div>
 <script>
+	function linspace(start, end, cardinality) {
+		let arr = [];
+		let currVal = start;
+		let step = ( end - start ) / ( cardinality - 1 );
+		for (let i=0; i < cardinality; i++) {
+			arr.push(currVal + (step * i))
+		}
+		return arr;
+	}
+
 	var test014 = document.getElementById("tester014")
 	var boxNumber = 30;
 	var boxColor = [];
-	var allColors = numeric.linspace(0, 360, boxNumber);
+	var allColors = linspace(0, 360, boxNumber);
 	var data = [];
 	var yValues = [];
-
-	//Colors
 
 	for( var i = 0; i < boxNumber;  i++ ){
 	  var result = 'hsl('+ allColors[i] +',50%'+',50%)';
@@ -518,8 +525,6 @@ Modified Bar Chart
 	function getRandomArbitrary(min, max) {
 	  return Math.random() * (max - min) + min;
 	};
-
-	//Create Y Values
 
 	for( var i = 0; i < boxNumber;  i++ ){
 	  var ySingleArray = [];
@@ -531,8 +536,6 @@ Modified Bar Chart
 	  yValues.push(ySingleArray);
 	}
 
-	//Create Traces
-
 	for( var i = 0; i < boxNumber;  i++ ){
 	  var result = {
 	    y: yValues[i],
@@ -543,8 +546,6 @@ Modified Bar Chart
 	  };
 	  data.push(result);
 	};
-
-	//Format the layout
 
 	var layout = {
 	  xaxis: {
