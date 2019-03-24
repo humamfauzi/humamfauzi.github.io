@@ -8,18 +8,18 @@ description: Basic implementation of RESTful web API and JWT implementation usin
 
 Basic API graph construction
 ```
-		+----------+      +---------+      +----------------+
-		| Endpoint | <--> | Handler | <--> | Business Logic |\ 
-		+----------+      +---------+      +----------------+ \
-								       \
-									\  +----------------+
-			...						 \ |    Library     |
-									 / +----------------+
-									/
-								       /
-		+----------+      +---------+      +----------------+ /
-		| Endpoint | <--> | Handler | <--> | Business Logic |/
-		+----------+      +---------+      +----------------+
++----------+      +---------+      +----------------+
+| Endpoint | <--> | Handler | <--> | Business Logic |\ 
++----------+      +---------+      +----------------+ \
+						       \
+							\  +----------------+
+	...						 \ |    Library     |
+							 / +----------------+
+							/
+						       /
++----------+      +---------+      +----------------+ /
+| Endpoint | <--> | Handler | <--> | Business Logic |/
++----------+      +---------+      +----------------+
 ```
 ### Basic API construction
 Most of web API that we encounter follow roughly the same pattern as described in graph above.
@@ -47,13 +47,13 @@ Usually one handler only have one business logic.
 Library is where common and reuseable mechanisms stored can can be called by any business logic. 
 For example, many business logic using automatic emailing for a different reason. 
 One for forgot email protocol, one for marketing purposes, and other for warning message.
+
 We can create a function for automatic email sending with recipient, sender, and message as a input so we don't need to replicate automatic emailing for every business logic.
 
 While it is really simple in graphs, in reality API construction can be complex because increasing number of endpoints and business logic.
 Building a maintainable API is developer goal.
 Coherent and orderly API can help both user (if you are selling your API service such as Google Map) and developer.
 User can easily learn your API structure and get what they need.
-The difficulty increased when API covers many areas thus increasing number of endpoints.
 A good documentation should make user adoption faster.
 For developer, a good documentation helps maintaining, debugging and inheriting code.
 
@@ -66,6 +66,7 @@ There are many other protocol such as RPC and SOAP but we will concentrate in RE
 
 RESTful API have four major method that perform CRUD operation which is GET--represent read operation, POST--represent create operation, PUT--represent update operation, and DELETE--represent delete operation.
 While it is true that all operation can be done with only POST method, assigning appropriate method to a endpoint help developer identify an operation and makes same endpoint reuseable for other method.
+
 For an example, adding a user can be done using POST method since we want to create a user. 
 Checking a user, maybe for a how long s/he has been registered, can be done using GET method.
 Updating info about user can be done using PUT method since we want to update information about a user with specific id.
@@ -79,9 +80,11 @@ Things such as authorization or adding more information to an original request s
 Authorization and authenticantion can be considered as middleware. 
 Few service maybe need more authorization before one could access business logic because it is contain a sensitive information.
 Each handler could have their own middleware. 
+
 For example, logging middleware maybe used in all handler because it is job is writing who is accessing, what handler s/he accessing, and what time s/he accessing the handler. 
 Authentication, on the other hand, only apply to several handler with greater degree of personalisation and private information. 
 Middleware is a part of library since it has repetitive task throughout handlers.
+
 Decorator pattern, like middleware, are common throughout software architecture.
 Decorator basically a function that take another function of a specific type and return the function of the same specific type.
 We can see in tutorial.
@@ -94,6 +97,7 @@ Login in something we access everyday seems tedious works.
 After all, we access it using our own device which rarely used by other people.
 Session come so we don't need login everytime we want to retrieve information such as our social media feeds, email inbox, and our shopping list in an ecommerce.
 Session usually given when we succeded login.
+
 Each session have expiry time.
 It explains why you still need to log in but not everytime you access it.
 Session comes in unique string that helps server recongnise that the one who sending a request to server is you.
@@ -104,6 +108,7 @@ According to ffical JSON Web Token Website, JWT are an open, industry standard R
 In our web API, these two parties are client and server. 
 With token, user does not need to login all the time to access information s/he needs which is like session we previously mentioned.
 JWT also support single sign on.
+
 JWT can be used to verify information exchange. 
 This can be achived by using public/private key pairs so we could sure the one who is sending is who they say they are.
 Additionaly, we can also sure the message is not tampered in by external parties.
