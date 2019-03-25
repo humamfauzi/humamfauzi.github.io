@@ -35,7 +35,7 @@ After invocation, handler will receive the data.
 Handler act as a router for data. Based on their path, handler decide what business logic should handle the data. 
 Handler also act as a gate; keep unwanted data or user from accessing business logic. 
 Verifying data is also part of handler task.
-For example, if data have a piece of information is missing, handler will return a rejection
+For example, if data have a piece of information is missing, handler will return a rejection.
 Identity and access management is a handler task.
 
 #### Business Logic
