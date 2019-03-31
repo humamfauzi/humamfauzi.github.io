@@ -3,7 +3,7 @@ layout: post
 title:  Web API, Middleware, and JWT
 category: Dev
 tags: [API, Session, RESTful]
-description: Basic implementation of RESTful web API and JWT implementation using Golang
+description: Explaination of RESTful web API and JWT implementation
 ---
 
 Basic API graph construction
