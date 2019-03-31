@@ -275,6 +275,7 @@ Both `ReadQuery` and `InsertQuery` are database function.
 All database functions are stored in `utils.go`.
 
 ```go
+// utils.go
 func InsertQuery(db *sql.DB, query string, input ...interface{}) error {
 	input = InputFilter(input...)
 
@@ -295,10 +296,79 @@ func InsertQuery(db *sql.DB, query string, input ...interface{}) error {
 
 	return nil
 }
+```
+We will explain `InputFilter` later.
+Inserting a rows in SQL using go comes in two step.
+First is prepareing the query itsel.
+If you open the query in json config, you will see that query have `?` on it.
+`?` will be replaced by values we provided in `stmt.Exec`.
+`rows.LastIndexId` is to check whether the rows is inserted or not.
 
-func D
+There are two things that need more explanation.
+First is `interface{}` and second is `...` as a input.
+If you already know what it represent, feel free to skip.
+`interface{}` is non determined type. 
+For example, when we query database, we may have input string or number.
+In this kind of case, we use `interface{}`. 
+To use `interface{}`, we need to infer it types first. 
+Like a json decoding where we should determine the struct first.
+
+As for `...` or variadic notation, let me gives an example.
+When querying a database, sometimes our query need many values and other times just only one or two values.
+Variadic notation handle this nicely.
+It makes multiple input considered as one.
+In our example above, we can have input as many as we like as long as match the number of `?` in query.
+For example, `InsertQuery(db, query, 123, 321, "askd")` can be acceptetd so does `InsertQuery(db, query, "wsda")`
+
+
+```go
+func ReadQuery(db *sql.DB, query string, input ...interface{}) ([]interface{}, error) {
+	rows, _ := db.Query(query, ...input)
+	columns, _ := rows.Columns()
+	count := len(columns)
+
+	val := make([]interface{}, count)
+	valPtrs := make([]interface{}, count)
+
+	for rows.Next() {
+		for i, _ := range columns {
+			valPtrs[i] = &val[i]
+		}
+		rows.Scan(valPtrs...)
+		return val, nil
+	}
+	return nil, nil
+}
 
 ```
+Code above only get one row only. 
+This is enough for now.
+We prepare two value with `interface{}` but one is a pointer to another value.
+In `rows.Scan`, we transfer all queried rows value to the value where the pointer pointing.
+That's why we return `val` not `valPtrs`.
 
+```go
+func InputFilter(input ...interface{}) []interface{} {
+	for i := 0; i < len(input); i++ {
+		switch input[i].(type) {
+		case int:
+			if input[i] == 0 {
+				var ph sql.NullInt64
+				input[i] = ph
+			}
+		case float64:
+			if input[i] == 0 {
+				var ph sql.NullFloat64
+				input[i] = ph
+			}
+		case string:
+			if len(input[i].(string)) == 0 {
+				var ph sql.NullString
+				input[i] = ph
+			}
+		}
+	}
+	return input
+}
 
-
+```
