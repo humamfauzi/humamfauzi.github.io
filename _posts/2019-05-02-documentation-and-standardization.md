@@ -1,5 +1,5 @@
 ---
-layout: construction
+layout: post
 title:  Documentation and Standardization of Code 
 category: Dev
 tags: [Docs, Standard, Practice]
