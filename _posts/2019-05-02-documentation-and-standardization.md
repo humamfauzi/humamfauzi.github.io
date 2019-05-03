@@ -5,7 +5,7 @@ category: Dev
 tags: [Docs, Standard, Practice]
 description: Argue why we need better documentation and standardization of code before scaling up devs team
 ---
-
+## Languages
 Peoples with different experience, knowledge and skill need to be at the same page when they are working towrds same goal.
 To make sure everyone means same thing about a thing, implementing a standard communication is important.
 Mistakes caused by miscommunication can drain resources fast and could waste useful time.
@@ -17,6 +17,7 @@ Language can be rigid and fluid. Maybe for critical operation we need to follow 
 
 We need to find balance between this rigid and creative approach so that we don't feel pressurized by protocol but not too unconstrained that we lost certainty in our language.
 
+## Dictionary and Documentation
 Now we already construct basic analogies, now it is time for the message. 
 We need to construct dictionary.
 Everyone could contribute to dictionary to add more words.
@@ -36,16 +37,19 @@ This is where documentation comes in. When there is a person who want to work in
 This act provide two advatange for team, a test for how well a case or feature is documented and decreasing hassle for people -- let's say a developer -- who work for that case or feature.
 Decreasing hassle is important part of developer work because it lets developer focus for work instead of explaining stuff that can be explained by reading a documentation that could accessed anytime.
 
+## Standardization and Documentation
 So we know the importance of good documentation, now we move to how we write a good documentation?
 In software development, there are two types of documentation, creators and users. The creators documentation should be superset of users documentation because not only it contains how to use and what to expect but also the logic behind how to return the expected result.
 There is no standard how we write a documentation but there is a baseline that we should follow.
 
 Complete and clear; a documentation should contain enough knowledge so one could reconstruct the case based on documentation in an unambiguous way. 
 In creators documentation, one should be able to reconstruct the case or feature based on documentation and in users documentation, one should be able to use it and have the same result as documentation shows.
+
 Reconstruct a case need a standardization because there is many way to do one thing. If every one have their own way to create something, the main code would be messed although the server or compiler still understand it and execute well.
 Having a flexible, optimised, one way to do certain task could help cut development time because developers already familiar with it and does not need extra time to understand it.
 Such way need to be preserved as a good practice should not be sacred.
 
+## Code Inheritenace and Scaling Argument
 Combining both documentation and standardization will yield a good code inheritence.
 This also sloping learning curve for new user or developer.
 S/he could catch up knowledge with their peers faster and follow team's pace faster.
