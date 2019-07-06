@@ -2,3 +2,4 @@ title: Humam Notes
 name: Humam Fauzi
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
+incremental: true
