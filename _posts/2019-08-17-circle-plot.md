@@ -43,5 +43,5 @@ Plain basic circle
       y: y_circle
     }
   ]
-  Plotly.newPlot(graph, component, layout)
+  Plotly.newPlot(circle, component, layout)
 </script>
