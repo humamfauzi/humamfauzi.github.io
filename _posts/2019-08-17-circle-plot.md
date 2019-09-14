@@ -11,7 +11,7 @@ $$ r^2 = x^2 + y^2 $$
 
 ### Circle Plotting
 Plain basic circle
-<div id="circle" style="width:600px;height:250px;"></div>
+<div id="circle" style="width:600px;height:600px;"></div>
 <script>
 const circle = document.getElementById("circle");
   function createCircle(radius) {
@@ -30,8 +30,8 @@ const circle = document.getElementById("circle");
   const [x_circle, y_circle] = createCircle(10)
   const square = 20
   const layout = {
-		width: 800,
-		height: 800,
+    width: 600,
+    height: 600,
     xaxis: {
       range: [-square,square]
     },
