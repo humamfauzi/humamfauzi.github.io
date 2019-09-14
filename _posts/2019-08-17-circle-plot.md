@@ -13,7 +13,7 @@ $$ r^2 = x^2 + y^2 $$
 Plain basic circle
 <div id="circle" style="width:600px;height:250px;"></div>
 <script>
-	const circle = document.getElementById("circle");
+const circle = document.getElementById("circle");
   function createCircle(radius) {
     const x = []
     const y = []
@@ -30,6 +30,8 @@ Plain basic circle
   const [x_circle, y_circle] = createCircle(10)
   const square = 20
   const layout = {
+		width: 800,
+		height: 800,
     xaxis: {
       range: [-square,square]
     },
