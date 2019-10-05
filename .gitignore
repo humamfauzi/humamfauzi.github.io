@@ -3,3 +3,4 @@ _site/
 *.swp
 */buffer.js
 */test.html
+.jekyll-metadata
