@@ -6,17 +6,21 @@ tags: [scraping, nodejs]
 description: How to use controlled browser environment and how to create test unit based on it
 ---
 
-What is puppeteer? Pupeteer is a module for emulating browsing experince using [chromium](https://www.chromium.org).
+Pupeteer is a module for emulating browsing experince using [chromium](https://www.chromium.org).
 Best thing about pupeteer is it use nodejs for operation so it could combine frontend and backend logic using same language which is javascript.
-There are at least two cases why puppeteer is useful. First, it can be used for end to end testing and verify business logic from backend and frontend.
+There are at least two cases why puppeteer is useful. 
+
+First, it can be used for end to end testing and verify business logic from backend and frontend.
 For example, we want to verify that our login page works as we intended to. 
 We could tell puppeteer to openup a chromium browser, create new tab, go to our login page URL, fill the username and password, and verify if it is works properly.
 We can integrate it with [mocha](https://mochajs.org) and [chai](https://www.chaijs.com) so we have a proper test unit for our login page.
+
 Second, we could utilize puppeteer to scrap from a website.
 Let's say we want to fetch the table displayed in a certain website.
-We can access the DOM[link to what is DOM is] and get the data such as name and date.
+We can access the [DOM](https://www.w3.org/TR/DOM-Level-2-Core/introduction.html) and get the data such as name and date.
 Since it use nodejs, we can user other nodejs module such as MySQL module so we can store our data in a database.
 Integrate it with AWS Lambda and we have automatic scrapper. 
+
 Last but not least, it maintained by Google Chrome team so it -- maybe -- won't be abandoned like other similar project.
 
 Here we want to explain the basic usage of puppeteer module.
