@@ -1,11 +1,11 @@
-
 ---
-layout: construction 
+layout: post 
 title: Web API, Middleware, and JWT
 category: Dev
 tags: [API, Session, RESTful]
 description: Basic implementation of RESTful web API and JWT implementation using Golang
 ---
+
 // TASK: need to knwo how linking post
 Previous article: 
 

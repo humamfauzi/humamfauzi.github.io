@@ -5,19 +5,10 @@ permalink: /about/
 ---
 
 
-Hi, my name is Humam Fauzi. I am a backend software engineer with experience handling
-Amazon Web Services (AWS) and multiple backend service such as designing, creating, and deploying
-Application Programming Interface (API) and supporting service such as Publisher/Subscriber. 
+Hi, my name is Humam Fauzi. Software engineer working in [Ritase](http://ritase.com), a Software-as-a-service startup in Indonesia. My current task is developing solution for managing logistics from but not limited to factory, port, warehouse, and store. One of our notable client is Nestle Indonesia. I traslate product requirement to technical implementation, ranging from application architecture down to documentation. I currently work with NodeJS but able to work in Golang and Python.
 
-Worked in deploying services such as Google's Dialogflow and Facebook's Wit.ai. Using AWS Lambda
-as a serverless backend to simplify development process while keeping it reliable, secure, and affordable.
-
-Creating scrapping schema to gather data automatically from designated website and integrate it with 
-data storage system. Use Python's Numpy and Pandas to do data manipulation/wrangling further. 
-Familiar with common machine learning library such as Scikit-Learn, Microsoft's Light Gradient Boosting Machine, 
-and Keras with TensorFlow backend. 
+If you want to contact me, feel free to drop a message in humam.fauzi.93@gmail.com
 
 ---
 
-My interest is numerical methods and computational science especially in large scale computing, batch jobs, and optimization problem. 
 
