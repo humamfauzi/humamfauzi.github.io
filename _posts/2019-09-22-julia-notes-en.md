@@ -1,13 +1,14 @@
 ---
 layout: post
 title: Julia Notes and Reference 
-category: CompSci
+categories: [en, CompSci]
 tags: [julia, reference]
 description: Semi-complete and quick reference guide to Julia
 ---
 
-This is a reference and tips page for Julia 
-Will update periodically
+This is a reference and tips page for Julia    
+Will update periodically    
+Indonesia version can be found [here]({% post_url 2019-09-22-julia-notes-id %})
 
 ### Filter an array
 We have array of numbers `a` with zeros in it. We want to remove the zeros.

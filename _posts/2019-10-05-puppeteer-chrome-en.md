@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Puppeteer -- Controlled browser environment using NodeJS
-category: Dev
+categories: [en, Dev]
 tags: [scraping, nodejs]
 description: How to use controlled browser environment and how to create test unit based on it
 ---
@@ -20,6 +20,8 @@ Let's say we want to fetch the table displayed in a certain website.
 We can access the [DOM](https://www.w3.org/TR/DOM-Level-2-Core/introduction.html) and get the data such as name and date.
 Since it use nodejs, we can user other nodejs module such as MySQL module so we can store our data in a database.
 Integrate it with AWS Lambda and we have automatic scrapper. 
+
+> When using pupeteer with AWS Lambda, please consider to use it as dedicated function since pupeteer takes much more space because chromium
 
 Last but not least, it maintained by Google Chrome team so it -- maybe -- won't be abandoned like other similar project.
 
@@ -156,4 +158,4 @@ describe('libs/puppeteer', function() {
 })
 ```
 
-This is only scratch the surface of what we could do in a controlled browser environemt. Hope this helps!
+This is only scratch the surface of what we could do in a controlled browser environemt. There is a lot more challenge testing or scrapping dynamic web. Hope this helps!
