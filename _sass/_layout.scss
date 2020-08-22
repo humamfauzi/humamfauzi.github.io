@@ -54,6 +54,9 @@ body {
 .logo {
   margin-bottom:12.5px;
   font-weight:$font-weight-bold;
+  text-align: center;
+  font-size: 5em;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 .logo a {
   -webkit-transition:.4s;
@@ -72,19 +75,24 @@ body {
 
 .nav {
   line-height: $base-line-height;
-
+  
   .page-link {
     color: $text-color;
-    line-height: 1.0;
-    display: block;
-    padding: 5px 0px 0px 0px;
+    line-height: 3.0;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    letter-spacing: 0.2mm;
+    font-family: 'Alata', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 
     li {
-      font-size:1.5rem;
+      font-size:2rem;
       list-style:none;
       font-weight: 100;
-      margin-bottom:1rem;
+      padding-left: 2%;
+      padding-right: 2%;
+      // margin-bottom:1rem;
+      display: inline
     }
 
     a:active {
@@ -166,7 +174,7 @@ input#menu-toggle {
 
 
 .site-header {
-  text-align:right;
+  text-align:left;
   @include media-query($on-laptop){
     text-align: center;
     margin-bottom: 40px;

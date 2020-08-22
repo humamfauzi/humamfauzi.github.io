@@ -9,6 +9,7 @@ title: Archive
 			<td>Date</td>
 			<td>Title</td>
 			<td>Category</td>
+			<td>Language</td>
 		</tr>
 		  {% for post in site.posts %}
 		  <tr>
@@ -16,7 +17,8 @@ title: Archive
 			  <td><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></td>
 			  <td><a href="{{ "/category/#" | append: post.category | prepend: site.baseurl }}">
 					  <data data-icon="ei-paperclip"></data><small>{{ post.category }}</small></a>
-			  </td>
+				</td>
+				<td>{{post.lang}}</td>
 		  </tr>
 		{% endfor %}		  
 	  	</tbody>

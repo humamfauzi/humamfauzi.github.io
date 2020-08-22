@@ -1,7 +1,6 @@
 <header class="site-header">
-
-  <h2 class="logo"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h2>
-
+  <div>
+  </div>
   <div class="nav">
     
     <label for="menu-toggle" class="menu-icon">
@@ -13,19 +12,18 @@
         </svg>
     </label>
     <input type="checkbox" id="menu-toggle">
-
+    <h2 class="logo"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h2>
     <div class="site-nav">
       <nav>
         <ul class="page-link">
-          <li><a href="{{ "/" | prepend: site.baseurl }}">Home</a></li>
-          <li><a href="{{ "/archive" | prepend: site.baseurl }}">Archive</a></li>
-	  <li><a href="{{ "/category" | prepend: site.baseurl }}">Category</a></li>
-	  <li><a href="{{ "/tags" | prepend: site.baseurl }}">Tags</a></li>
-          <li><a href="{{ "/about" | prepend: site.baseurl }}">About</a></li>
+          <li><a href="{{ "/category" | prepend: site.baseurl }}">CATEGORY</a></li>
+          <li><a href="{{ "/tags" | prepend: site.baseurl }}">TAGS</a></li>
+          <li><a href="{{ "/archieve" | prepend: site.baseurl }}">ARCHIEVE</a></li>
+          <li><a href="{{ "/about" | prepend: site.baseurl }}">ABOUT</a></li>
+          <li>SERIES</li>
           <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a></li>
         </ul>
       </nav>
     </div>
-
   </div>
 </header>

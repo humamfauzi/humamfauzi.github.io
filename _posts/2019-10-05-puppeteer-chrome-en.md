@@ -2,6 +2,7 @@
 layout: post
 title:  Puppeteer -- Controlled browser environment using NodeJS
 categories: [en, Dev]
+lang: en
 tags: [scraping, nodejs]
 description: How to use controlled browser environment and how to create test unit based on it
 ---
