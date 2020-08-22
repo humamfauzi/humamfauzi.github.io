@@ -17,8 +17,7 @@
   <link rel="stylesheet" href="{{"/assets/evil-icons.min.css" | prepend:site.baseurl }}">
   <script src="{{"/assets/evil-icons.min.js" | prepend:site.baseurl }}"></script>
 
-  <!-- math jax script -->
-  
+  <!-- math jax script // Should have a script that detect whether the post is have math in its post properties -->
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       TeX: {
@@ -35,7 +34,7 @@
   </script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"></script>
 
-  <!-- Plotly Script -->
+  <!-- Plotly Script // Same as Mathjax, it script shouldn't be required if the post does not contain plot-->
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
