@@ -32,24 +32,24 @@ Pada bagian ini dijelaskan cara dasar menggunakan pupeteer.
 const puppeteer = require('puppeteer');
 
 async initPuppeteer() {
-	// Membuka pupeteer
-	const browser = await puppeteer.launch();
-	
-	// Membuka tab kosong
-	const page = await browser.newPage();
+  // Membuka pupeteer
+  const browser = await puppeteer.launch();
+  
+  // Membuka tab kosong
+  const page = await browser.newPage();
 
-	// Pilih halaman web yang akan dituju
-	await page.goto('http://example.com');
-	
-	const title = await page.evaluate(() => {
-		// code javascript FE dapat digunakan disini
-		return document.querySelector('h1').innerText
-	})
+  // Pilih halaman web yang akan dituju
+  await page.goto('http://example.com');
+  
+  const title = await page.evaluate(() => {
+    // code javascript FE dapat digunakan disini
+    return document.querySelector('h1').innerText
+  })
 
-	console.log("Title", title)
-	
-	// Setelah beres, browser harus ditutup kembali
-	await browser.close()
+  console.log("Title", title)
+  
+  // Setelah beres, browser harus ditutup kembali
+  await browser.close()
 }
 
 initPuppeteer()
@@ -68,13 +68,13 @@ const puppeteer = require('puppeteer');
 const libs = {}
 
 libs.getTitle = async function(page, pageUrl) {
-	await page.goto(pageUrl)
+  await page.goto(pageUrl)
 
-	const title = await page.evaluate(() => {
-		return document.querySelector('h1').innerText
-	})
+  const title = await page.evaluate(() => {
+    return document.querySelector('h1').innerText
+  })
 
-	return title
+  return title
 }
 
 module.exports = libs
@@ -88,24 +88,24 @@ const { expect } = require('chai');
 const libs = require('./main')
 
 describe('libs/puppeteer', function() {
-	let browser, page;
+  let browser, page;
 
-	before(async function() {
-		browser = await puppeteer.launch()
-		page = await browser.newPage()
-	})
+  before(async function() {
+    browser = await puppeteer.launch()
+    page = await browser.newPage()
+  })
 
-	after(async function() {
-		await browser.close();
-	})
+  after(async function() {
+    await browser.close();
+  })
 
-	it('should fetch title from example.com', function() {
-		const pageUrl = 'http://example.com';
-		return libs.getTitle(page, pageUrl)
-		.then(function(result) {
-			expect(result).to.shallowDeepEqual("Example Domain")
-		})
-	})
+  it('should fetch title from example.com', function() {
+    const pageUrl = 'http://example.com';
+    return libs.getTitle(page, pageUrl)
+    .then(function(result) {
+      expect(result).to.shallowDeepEqual("Example Domain")
+    })
+  })
 })
 ```
 
@@ -123,38 +123,38 @@ const { expect } = require('chai');
 const libs = require('./main')
 
 describe('libs/puppeteer', function() {
-	let browser, page1, page2;
+  let browser, page1, page2;
 
-	before(async function() {
-		browser = await puppeteer.launch();
-		([
-			page1,
-			page2
-		] = await Promise.all([
-			browser.newPage()
-			browser.newPage()
-		])
-	})
+  before(async function() {
+    browser = await puppeteer.launch();
+    ([
+      page1,
+      page2
+    ] = await Promise.all([
+      browser.newPage()
+      browser.newPage()
+    ])
+  })
 
-	after(async function() {
-		await browser.close();
-	})
+  after(async function() {
+    await browser.close();
+  })
 
-	it('should fetch title from example.com', function() {
-		const pageUrl = 'http://example.com';
-		return libs.getTitle(page1, pageUrl)
-		.then(function(result) {
-			expect(result).to.shallowDeepEqual("Example Domain")
-		})
-	})
+  it('should fetch title from example.com', function() {
+    const pageUrl = 'http://example.com';
+    return libs.getTitle(page1, pageUrl)
+    .then(function(result) {
+      expect(result).to.shallowDeepEqual("Example Domain")
+    })
+  })
 
-	it('should fetch title from w3c.com', function() {
-		const pageUrl = 'https://w3c.org'
-		return libs.getTitle(page2, pageUrl)
-		.then(function(result) {
-			expect(result).to.shallowDeepEqual('W3C')
-		})
-	})
+  it('should fetch title from w3c.com', function() {
+    const pageUrl = 'https://w3c.org'
+    return libs.getTitle(page2, pageUrl)
+    .then(function(result) {
+      expect(result).to.shallowDeepEqual('W3C')
+    })
+  })
 })
 ```
 Ini hanya menjadi dasar dari penggunaan pupeteer baik untuk testing maupun untuk scraping. Banyak trik yang dapat diterapkan khususnya untuk halaman web yang lebih dinamis.

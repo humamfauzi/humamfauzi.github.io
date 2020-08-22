@@ -33,7 +33,7 @@ const puppeteer = require('puppeteer');
 
 async initPuppeteer() {
 	// Open up the browser
-	const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch();
 	
 	// Open a tab 
 	const page = await browser.newPage();
