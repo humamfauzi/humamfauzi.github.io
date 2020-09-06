@@ -632,12 +632,10 @@ Modified Bar Chart
 	var high = unpack(rows, 'AAPL.High').map(x => parseFloat(x));
 	var low = unpack(rows, 'AAPL.Low').map(x => parseFloat(x));
 	var date = unpack(rows, 'Date');
-
 	var high_ave = arrAvg(high)
 	var high_max = Math.max(...high)
 	var low_ave = arrAvg(low)
 	var low_min = Math.min(...low)
-
 	var data = [{
 			x: date,
 			y: high,
@@ -668,9 +666,7 @@ Modified Bar Chart
 			visible: false,
 			line: {color: '#F06A6A', dash: 'dash'}
 		},
-
 	]
-
 	var high_annotations = [
 			{
 				text: 'High Average:<br>' + high_ave.toFixed(2),
@@ -687,7 +683,6 @@ Modified Bar Chart
 				ay: -40, ax: 0
 			},
 	]
-
 	var low_annotations = [{
 				text: 'Low Average:<br>' + low_ave.toFixed(2),
 				x: '2015-05-01',
@@ -703,7 +698,6 @@ Modified Bar Chart
 				ay: 40, ax: 0
 			}
 	]
-
 	var updatemenus=[
 			{
 					buttons: [
@@ -735,7 +729,6 @@ Modified Bar Chart
 									label: 'Reset',
 									method: 'update'
 							},
-
 					],
 					direction: 'left',
 					pad: {'r': 10, 't': 10},
@@ -746,9 +739,7 @@ Modified Bar Chart
 					y: button_layer_2_height,
 					yanchor: 'top'
 			},
-
 	]
-
 	var layout = {
 			title: 'Yahoo',
 			updatemenus: updatemenus,
