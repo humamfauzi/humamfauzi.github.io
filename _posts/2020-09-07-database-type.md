@@ -6,8 +6,6 @@ tags: [database, relational, nosql]
 description: Here we discuss many type of database and its functionality. We also discuss database features that makes one database different from one and the other.
 ---
 
-## Database Overview
-
 Here we discuss many type of database and its functionality. We also discuss database features that makes one database different from one and the other. In modern app, database plays central role in storing and retrieving data. The internet penetration to many layer of social aspect in public domain makes internet plays central role in improving one lifes.
 
 While database technology is not as sexy as machine learning, it still one of the foundation of a great app. Any software developer should have knowledge about database so that it could help s/he to decide what is the best approach of a certain app problem. We hope this article will help you understand database better.
@@ -41,36 +39,36 @@ It may miss several thing but for now it works and serve me well for me
 
 There are many database type created to suit business needs. Knowing each advantage and disadvantage will help us pick best database that fit our needs. This is an ideal course, assuming that you want to build something from empty ground. If you want to migrate from a database to another database, maybe there are several additional step but it is outside of the scope of this article. Most of database mentioned here is provided directly or indirectly from cloud provider.
 
-### Key Value
+#### Key Value
 Key value store work like a map or JSON (Javasript Object Notaation). It can add a key and a value. A value can be called using key. Key-value store like Redis works fast because it store the data in memory rather than disk. This can reduce latency down to miliseconds. Disadvantange of Key-value store are naming key and limited storage. The more detail information you want to store, longer the key required to ensure key won't conflict with another recorded key. Stored in memory usually have a lower capacity compared to disk storage. Same size storage can have huge different pricing between memory and disk.
 
 Key value store is also hard for query because the only way to query a data is through key.This makes key value store only suitable for quick grab information.
 
-### Wide Column
+#### Wide Column
 
 Wide column is schemaless database means you don't need to construct data structure before using the database. It has key and document that act as a column. Wide column used for logging many data points operation such as IoT because can be distributed hence enhance durability of storage. Cassandra database support distributed service and schemaless. It also have its own query language -- a syntax to store or retrieve data from database -- called CQL. Similarity between CQL and standard SQL query makes catching up to CQL is not learning from zero.
 
 Many wide column database have a good writing but lack of good reading capabilites. Analyzing data from wide column database need an external support to convert it to better database type so it could processed further.
 
-### Document
+#### Document
 
 Document database is what people refer to as NoSQL. These database is schemaless and several of it support distributed service. Storing in document database is like storing a big JSON/Map. It suitable for early app because it schemaless so there is no need to define a rigid data structure. Document database also have index to optimize query. Filtering and searching inside document database is also possible with a query that every databse have their own language.
 
 The most notable document database type is mongo DB. It is a free database that utilized by many companies to fit their needs. The popularity of mongo DB causes abundance of tutorial, different use cases, and community troubleshooting aka StackOverflow. Although it has its own query language and have different syntax from its relational sibling, it fairly easy to pick up and impelement structure or query you want to implement.
 
-### Relational
+#### Relational
 
 The most famous database type because it originates back in early computer boom. Relational database need a schema to operate. While it sounds cumbersome, it actually has at least two benefits. First is keeping your data neat and understandable. Second is its rigidity ensure any program that interact with it follows it rules not the other way around. Relational database enable users create relation between their data. While it sounds trivial, it have a lot of impact in data structure. Creating relation makes user could create a more complex and customizable table that consisted data from many table. Most of the problem, at least in my exprience, can be modeled with relational database.
 
 Most notable relational database is MySQL and PostgreSQL. There paid relational database sevice such as oracle and Microsoft SQL but i choose the free one. 
 
-### Graph
+#### Graph
 
 Graph database is the database that usually forgotten when someone talks about NoSQL. Graph database focus on relations between node. Like in graph theory, data that stored in graph database consists of node and vertex. Graph database excel in handling many-to-many relations. While relational database capable doing many to many relationship using join tables, graph database manage it without using additional tool.
 
 I can't say many things about graph database because i never use it really. I'd love to explore interesting case that graph database plyas central role.
 
-### Full Text Search
+#### Full Text Search
 
 It pretty similar to docoment database. Notable player in full text search is elasticsearch. While elastic support paradigm that any document database support, i think it really shine in full text search. It offers quick search so that is support autocomplete search in a search bar. In text heavy application such archive elasticsearch really helps. On a good side, elasticsearch use Rest API to interact with database.
 
