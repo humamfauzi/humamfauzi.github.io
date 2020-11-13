@@ -3,4 +3,5 @@ _site/
 *.swp
 */buffer.js
 */test.html
-./.jekyll-metadata
+.jekyll-metadata
+Gemfile.lock
