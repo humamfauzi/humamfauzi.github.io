@@ -3,6 +3,7 @@ layout: post
 title: Plotting 
 category: CompSci
 tags: [Visualization, test, reference]
+requires: ['plotly']
 description: Semi-complete plotly reference for further use
 ---
 This is an attempt to create a plot in a markdown page. While we succeed inserting math equation to post, we need to insert plot so we can

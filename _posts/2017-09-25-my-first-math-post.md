@@ -3,6 +3,7 @@ layout: post
 title: "Math Post Reference"
 date: 2015-04-30
 category: Math
+requires: ['mathjax', 'asu']
 description: Mathjax Reference for writing math related stuffs
 tags: [TeX, Reference]
 ---

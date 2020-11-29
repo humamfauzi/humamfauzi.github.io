@@ -3,6 +3,7 @@ layout: post
 title: Plotting With a Frame 
 category: CompSci
 tags: [Visualization, test]
+requires: ['plotly']
 description: plotting a circle and have fun with it
 ---
 We want to plot a circle, first we need to define the circle function
