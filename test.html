@@ -1,0 +1,35 @@
+<html>
+<head>
+  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/plottable.js/2.0.0/plottable.min.js"></script> -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/plottable.js/1.6.1/plottable.min.css">
+  <script src="/dist/main.js"></script>
+</head>
+<body>
+  <div id="example"></div>
+  <svg id="example2"></svg>
+  <script type="text/javascript">
+    const getLib = new window.AncillaryLib.GeneralLibrary()
+    const plottableLibs = new getLib.ExtractPlottableLib()
+    const plotLineInstance = new plottableLibs()
+    const Plottable = plotLineInstance.plottableBase()
+    var exampleDiv = document.getElementById("example")
+    var xScale = new Plottable.Scales.Category();
+    var yScale = new Plottable.Scales.Linear();
+    var data = [{ x: 1, y: 1 }, { x: 2, y: 3 }, { x: 3, y: 2 },
+              { x: 4, y: 4 }, { x: 5, y: 3 }, { x: 6, y: 5 }];
+
+    var plot = new Plottable.Plots.Line()
+    .addDataset(new Plottable.Dataset(data))
+    .x(function(d) { return d.x; }, xScale)
+    .y(function(d) { return d.y; }, yScale)
+    .renderTo("svg#example2")
+
+
+    window.addEventListener("resize", function() {
+      plot.redraw();
+    });
+
+  </script>
+</body>
+</html>

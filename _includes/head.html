@@ -37,21 +37,14 @@
   </script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"></script>
   {% endif %}
-  
-  <!-- PlottableJS script // Should have a script that detect whether the post is have math in its post properties -->
-  {% if page.requires contains 'plottablejs' %}
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.2.0/d3.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/plottable.js/2.0.0/plottable.min.js"></script>
-  {% endif %}
 
   <!-- Plotly Script // Same as Mathjax, it script shouldn't be required if the post does not contain plot-->
   {% if page.requires contains 'plotly' %}
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   {% endif %}
 
-  {% if page.local_requires contains 'plottable_lib' %}
-    <script src="/scripts/main.js"></script>
-  {% endif %}
+  <script src="/dist/main.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/plottable.js/1.6.1/plottable.min.css">
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
