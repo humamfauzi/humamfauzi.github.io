@@ -43,7 +43,7 @@
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   {% endif %}
 
-  <script src="/dist/main.js"></script>
+  <script src="{{ "/dist/main.js" | prepend: site.baseurl }}" type="text/javascript"></script>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/plottable.js/1.6.1/plottable.min.css">
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
