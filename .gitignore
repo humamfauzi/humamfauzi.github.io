@@ -6,4 +6,3 @@ _site/
 .jekyll-metadata
 Gemfile.lock
 node_modules
-dist
