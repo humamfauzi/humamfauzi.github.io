@@ -453,7 +453,7 @@ blockquote {
 
 .plot_container {
   background: #F5F8FA;
-  padding: 40px;
+  padding: 20px;
   position: relative;
 }
 
@@ -461,4 +461,17 @@ blockquote {
   position: inherit;
   margin-left: auto;
   margin-right: auto;
+}
+
+.modLabel {
+  font-size: 32pt;
+  border: 10px solid red;
+}
+
+.modTable {
+  border: 1px solid red;
+}
+
+.textModColor {
+  color: #555555
 }
