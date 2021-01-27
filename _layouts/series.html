@@ -1,0 +1,56 @@
+---
+layout: default
+---
+<h1>{{ page.title }}</h1>
+<span class="meta">{{ page.date | date_to_string }}</span>
+<p></p>
+{% if page.tags %}
+{% for tag in page.tags %}
+	<a href="{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}" class="post-tag">
+	<data data-icon="ei-tag"></data>
+	       	{{ tag }} 
+	</a>
+{% endfor %}
+{% endif %}
+<p></p>
+<div class="post">
+  {{ content }}
+</div>
+
+<div>
+  <nav class="series-nav">
+    <ul class="series-nav">
+      <li class="series-nav">
+        <span class="series_nav">
+        {% if page.prev_page %}
+          <a href="{{ site.baseurl }}/series/{{ page.main }}/{{ page.prev_page }}">
+            <data data-icon="ei-arrow-left"></data>
+            {{ page.prev_page }}
+          </a>
+        {% else %}
+          <data data-icon="ei-close-o"></data>
+        {% endif %}
+        </span>
+      </li>
+      <li class="series-nav">
+        <span class="page_order">{{ page.page }}</span>
+      </li>
+      <li class="series-nav">
+        <span class="series_nav">
+          {% if page.next_page %}
+            <a href="{{ site.baseurl }}/series/{{ page.main }}/{{ page.next_page }}">
+              {{ page.next_page }}
+              <data data-icon="ei-arrow-right"></data>
+            </a>
+          {% else %}
+            <data data-icon="ei-close-o"></data>
+          {% endif %}
+        </span>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+
+
+

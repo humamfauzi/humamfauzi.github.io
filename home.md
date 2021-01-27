@@ -4,7 +4,10 @@ title: Homepage
 permalink: /
 ---
 
-Welcome to my notes, while i work in no-longer-working burger button. Phone user could use this homepage to naviagate around site. There are six navigation. First is [category]({{ site.baseurl }}/category) which contain post that already grouped by its category. Second is Series which is a multiple post about something. I still work on that one. Third is [tags]({{ site.baseurl }}/tags) which similar like category but consist of multiple things. For example, a certain post could be about tech and math at the same time. Fourth, there is [archive]({{ site.baseurl }}/archive) where all post contained. Last but not least, is [about]({{ site.baseurl }}/about) which you can learn more about me. I have zero idea what RSS means anyway.
+The phone display still on construction, i still learning how to adapt the layout and other stuffs in
+mobile devices but i already try several stuffs.
+
+I finally build series mechanism. Hopefully will write series soon.
 
 Below you can navigate to three most recent post i made
 
