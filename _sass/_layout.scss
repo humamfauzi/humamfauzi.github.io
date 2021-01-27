@@ -124,13 +124,9 @@ body {
     -webkit-justify-content: center;
     justify-content:center;
 
-    @include media-query($on-laptop) {
-      border-top:1px solid #ddd;
-      border-bottom:1px solid #ddd;
-    }
   }
   
-  #menu-toggle:checked+.site-nav {
+  .site-nav {
     opacity: 1;
     height: auto;
     margin-bottom:-25px;
@@ -139,6 +135,12 @@ body {
 
 input#menu-toggle {
   display:none;
+}
+
+
+
+#menu-toggle:checked {
+  opacity: .1;
 }
 
 .nav .menu-icon {
@@ -152,8 +154,10 @@ input#menu-toggle {
     @include media-query(400px) {
       top: 13px;
     }
-
-    display: block;
+    /**
+    * Removing it, because somehow it does not work
+    */
+    display: none;
     text-align: center;
 
     &:hover {
@@ -280,6 +284,37 @@ p.readmore {
 
 .article-next {
 
+}
+
+nav.series-nav {
+  width: 80%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.series-nav {
+  text-align: center;
+  // float: left;
+  list-style-type: none;
+}
+li.series-nav {
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: inline-block;
+  position: relative;
+  top: 50%;
+}
+.series-nav:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+.page_order {
+  font-size: 200%;
 }
 
 /* author info */

@@ -1,0 +1,24 @@
+---
+layout: page
+title: Series
+---
+
+Welcome to series page, here i wrote some several in depth topics about something. Most of it has more that one post thus the name. Every topics that requires more than one post will be categorized as Series. I try to make this series step by step so that everyone could follows.
+
+For managing this series, i use feature called <code class="highlighter-rouge">collections</code> in jekyll. if you want to know more, more information can be found <a href="https://jekyllrb.com/docs/collections/">here</a>. Anyway here is all the series i write.
+
+<div>
+	<div>
+    {% assign titles = site.series | map: 'main' | uniq %}
+    {% for title in titles %}
+      {% for serie in site.series %}
+        {% if serie.main == title %}
+          <a href="{{ "/series/" | append: serie.main | prepend: site.baseurl }}"><h5>{{ serie.main }}</h5></a>
+          <p>{{ serie.description | markdownify }}</p>
+          {% break %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+	</div>
+</div>
+

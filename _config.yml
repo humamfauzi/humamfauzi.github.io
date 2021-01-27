@@ -3,3 +3,8 @@ name: Humam Fauzi
 markdown: kramdown
 permalink: /:categories/:title
 incremental: true
+collections:
+  series:
+    output: true
+  staff_members:
+    output: true
