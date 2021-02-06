@@ -47,6 +47,6 @@ This is list of questions that the answer worth to be included in book reviews, 
 While it seems only works for fiction, it is also works for nonfiction with few adjustment.
 
 ### Reviewer Opinion
-I should have an opinion on the book you review. It meant to be subjective. People want my perspective (maybe ¯\_(ツ)_/¯). If they want to know general properties about the book, they can go to goodreads or Amazon pages. I should embed the view throughout review. It ensures the view is shown clearly instead of telling the reader what you think in the in the end of the passage. If you want to prove it a point, show my point first then tell the readers what you want to tell and show them why you think like that. Proving and backing up details help readers to know what expect from the book. Stephen King advice: if you want to write, you should read a lot. 
+I should have an opinion on the book you review. It meant to be subjective. People want my perspective (maybe ¯\\_(ツ)_/¯). If they want to know general properties about the book, they can go to goodreads or Amazon pages. I should embed the view throughout review. It ensures the view is shown clearly instead of telling the reader what you think in the in the end of the passage. If you want to prove it a point, show my point first then tell the readers what you want to tell and show them why you think like that. Proving and backing up details help readers to know what expect from the book. Stephen King advice: if you want to write, you should read a lot.
 
 
